@@ -25,8 +25,8 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y \
-          python3 \
-          python3-pip \
+          python2 \
+          python2-pip \
           cpio \
           wget \
           zip \
@@ -34,7 +34,7 @@ jobs:
         
     - name: Install TWRP generator
       run: |
-        pip3 install --upgrade twrpdtgen
+        pip2 install --upgrade twrpdtgen
         
     - name: Download recovery image
       run: |
@@ -44,7 +44,7 @@ jobs:
     - name: Generate device tree
       run: |
         mkdir -p device_tree_output
-        python3 -m twrpdtgen \
+        python2 -m twrpdtgen \
           -o device_tree_output \
           boot1.img
         

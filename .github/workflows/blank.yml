@@ -46,7 +46,7 @@ jobs:
         mkdir -p device_tree_output
         python3 -m twrpdtgen \
           -o device_tree_output \
-          recovery.img
+          boot.img
         
     - name: Compress device tree
       run: |
